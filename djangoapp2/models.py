@@ -6,9 +6,11 @@ from django.db.models.fields import AutoField
 # Mammal, Bird and Fish with features mentioned above
 
 CHOICES = [
-    ('Male','female')
+    ('male','male'),
+    ('female','female')
 ]
 class Mammal(models.Model):
+    # pk = models.AutoField(PrimaryKey =True,null=True,blank=True)
     name = models.CharField(max_length=100,primary_key=True)
     species = models.CharField(max_length=100 , null=True, blank=True) 
     food = models.CharField(max_length=100, null=True, blank=True)
@@ -29,7 +31,7 @@ class Bird(models.Model):
 
 class Fish(models.Model):
     color = models.CharField(max_length=100,null=True, blank=True)
-    species = models.CharField(max_length=100,null=True)
+    species = models.CharField(max_length=100,primary_key=True)
     food = models.CharField(max_length=100,null=True)
     count = models.IntegerField(null=True,blank=True)
     last_feed = models.DateField(null=True, blank=True)
