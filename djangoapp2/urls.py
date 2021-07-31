@@ -5,11 +5,8 @@ from .views import func1 , mammals , birds , fishes
 urlpatterns =[
     path('',func1 , name='APP'),
     path('mammals/',mammals),
-    path('mammals/<str:name>',mammals),
     path('birds/',birds),
-    path('birds/<str:name>',birds),
-    path('fishes/',fishes),
-    path('fishes/<str:species>',fishes)
+    path('fishes/',fishes)
 ]
 
 
