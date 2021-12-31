@@ -7,7 +7,7 @@ Consider you have to Develop a Software for Managing products and order list . T
 Product<br />
 1. Name (name) -> String<br />
 2. id (int) -> int<br />
-3. Price (food) -> string<br />
+3. Price (int) -> string<br />
 4. prod_desc  (description of the product) -> string<br />
 5. prod_avail (Boolean) -> 2 choices (T, F)<br />
 
@@ -19,7 +19,7 @@ ORDER <br />
 5. order_total  (product price * order_items(total orders ordered by user)) -> str<br />
 
 User<br />
-1. name (color) -> String<br />
+1. name (str) -> String<br />
 2. id (int) -> int<br />
 3. email -> String<br />
 
@@ -59,7 +59,7 @@ url(r'^main/', views.main, name='main')
 
 **Part 1: GET, POST, PUT and DELETE request for fetching Products**
 
-**Django URL name: mammals**<br />
+**Django URL name: orders**<br />
 No parameter<br />
 
 TEMPLATE 2
@@ -107,8 +107,8 @@ No parameter<br />
 
 **Actions**:<br />
 1. GET - get list of all or one order<br />
-2. POST - Add a new order to the Zoo<br />
-4. DELETE - Remove order from the zoo<br />
+2. POST - Add a new order to the order<br />
+4. DELETE - Remove order from the order<br />
 <br /><br />
 **Each and every detail regarding user, product, order needs to be displayed - Refer to the model**
 <br />
