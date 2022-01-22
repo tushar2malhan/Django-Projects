@@ -59,3 +59,6 @@ The logic of the application is really simple:
 1. Within the project, I included also TinyMCE, which makes it easier to edit the content. However, the link is created for me so please register to TinyMCE and get your own link. Otherwise, you will always receive a notification that your domain is not registered, however, you can still ignore this notification and use the editor.
 
 I have a separate application created to handle notifications. Both user and superuser receive a message from the system once a post or a comment is submitted. Then superuser can approve or delete if necessary.
+
+Kindy refer to the screenshots for the same 
+https://github.com/tushar2malhan/shared/tree/master/project_6/screenshots
