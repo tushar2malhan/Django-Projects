@@ -4,6 +4,9 @@
 
 Consider you have to Develop a Software for Managing products and order list . The product  is divided into multiple categories like in amazon shopping list . you need  to manage the following features for each category, So that ur models will be mapped to each other and will be called via REST API .Heres the info of the models of the app<br />
 
+````
+TEMPLATE 1
+````
 Product<br />
 1. Name (name) -> String<br />
 2. id (int) -> int<br />
@@ -11,6 +14,9 @@ Product<br />
 4. prod_desc  (description of the product) -> string<br />
 5. prod_avail (Boolean) -> 2 choices (T, F)<br />
 
+````
+TEMPLATE 2
+````
 ORDER <br />
 1. order id (order no) -> int<br />
 2. product id (product id) -> int<br />
@@ -18,6 +24,10 @@ ORDER <br />
 4. order_items(total orders ordered by user) -> str<br />
 5. order_total  (product price * order_items(total orders ordered by user)) -> str<br />
 
+
+````
+TEMPLATE 3
+````
 User<br />
 1. name (str) -> String<br />
 2. id (int) -> int<br />
