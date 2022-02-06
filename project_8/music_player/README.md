@@ -1,6 +1,6 @@
 # Django Music Player
 # Template 1
-A music player built with django web framework
+A Music Player built with django web framework
 . Need to display an Image 
 . Should be able to play and stop music
 . SHould display the current time of the song
