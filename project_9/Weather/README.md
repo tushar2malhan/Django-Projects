@@ -12,20 +12,26 @@ Project is created with
 This is a application to check weather every city around the world.For Backend using Django Framework and Front End using Bootstrap and also i use openweather for consume the API
 i put requirements.txt for the requirement that i have for this application.
 
-How to use or install this app on your computer?
-### 1. Install the requirement.txt on your computer using pip
-
+### Template  1
 ```python
 pip install -r requirements.txt
 ```
-Template 2
-### 2.  After install all the requirement.txt extract the project and open the project, type this on your terminal 
+* Try to make The weather app UI experience with images and music.
+* Try to make the weather app UI more responsive.
+
+
+
+### Template 2 
 ```python
 python manage.py makemigrations
 python manage.py migrate
 ```
+* Try to make the weather app UI more interactive.
+* Can Use mysql database to store multiple cities data in a single table.
 
-### 3. Run the server using 
+
+
+### Template 3
 ```python
 python manage.py runserver
 ```
@@ -33,15 +39,12 @@ python manage.py runserver
 Your django it's live now open your browser and type 127.0.0.1:8000
 Or just Ctrl + Click on the terminal where your server is running , it will  automatically connect you to the server
 
-Template 3
 For more information ,you can view the screenshots for better understanding.
-* Try to make The weather app UI experience more intuitive and interesting.
-* Try to make the weather app UI more responsive.
-* Try to make the weather app UI more interactive.
 * Try to make the weather app UI more user friendly.
-* Can Use mysql database to store multiple cities data in a single table.
 * Can Use PostgreSQL database to store multiple cities data in a single table.
 
+
+- For more information ,you can view the screenshots for better understanding.
 
 #### I have added the screenshots in the screenshots directory.Kindly view it for better understanding.
 

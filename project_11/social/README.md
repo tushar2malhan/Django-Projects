@@ -1,12 +1,7 @@
 # Django-Web-Scrapper
 
+Scrapping Data from social mediia accounts
 
-# TEMPLATE 1
-Scrap data from social media accounts like 
-* Facebook (Meta)
-* Instagram 
-* Twitter
-* Linkedin
 Only GET METHOD TO BE IMPLEMENTED HERE
  in Django using Web scraping tools like Beautiful soup or chrome driver
 
@@ -22,15 +17,28 @@ Only GET METHOD TO BE IMPLEMENTED HERE
 - Run "python manage.py runserver" to start the server
 - Hit the server http://127.0.0.1:8000/ then follow terminal
 
+# TEMPLATE 1
+Scrap data from social media accounts like 
+* Facebook (Meta)
+* Instagram 
+* Twitter
+* Linkedin
+- Any 2 or more social media accounts
+
+
 
 # TEMPLATE 2 
-* We would require The user's name , (username will make each of them unique)
-* their profile pic ,
-* their number of followers 
-* total number of posts 
-* RESULT > IN REST FRAMEWORK
+* We would require The user's name , (username will make each of them unique) and their profile pic 
+* their number of followers , posts 
+- RESULT > IN REST FRAMEWORK
+
 
 # TEMPLATE 3
+- Here based on User input in terminal (like python manage.py runserver) - You can also see the data in the terminal
+- Make sure you use Multiple exceptions (try/catch blocks) if profile is hidden or it is not int for the public view etc...
+- Optional -> Only logged in users can see the data or Use the Get method to get the data
+
+
 # Additional changes to be done
 - Go to https://chromedriver.chromium.org/downloads , according to ur system download it or use Beautiful soup to scrape data
 - make sure you give the chrome driver path in ur file , so that it can detect the existence of it.
@@ -38,11 +46,6 @@ Only GET METHOD TO BE IMPLEMENTED HERE
 - Scroll till you find the right path of the data like if  you need to scrap element Use XPath or CSS selector or classname or id etc.
 - Here you will find that the data is accurate
 - Now you can run the project 
-- Here based on User input in terminal (like python manage.py runserver) - You can also see the data in the terminal
-- Make sure you use Multiple exceptions (try/catch blocks) if profile is hidden or it is not int for the public view etc...
-- At any case, the Url should not throw an error , if it does then control it.
-- if data dont go to element , Use pyautogui to locate image on screen to click the image data
-- Optional -> Only logged in users can see the data or Use the Get method to get the data
 
 
 * FOR FB AND LINKEDIN You NEED TO LOGIN FIRST TO CHECK EACH SPECIFICATIONS
