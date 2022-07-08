@@ -6,26 +6,33 @@
     * Books
     * Login,Signup Credentials
 
+
 # Template 1
-# A COMPLETE Django Local Library WITH DJANGO FRAMEWORK
-. Need to display an Image of Homepage
-. Should be able to all authors
-. Should display the username 
-. All books
-. OPTIONAL: Should be able to search Languages with search bar
+
+    A COMPLETE Django Local Library WITH DJANGO FRAMEWORK
+
+    . Need to display an Image of Homepage, view all authors
+    . Should display the username  and all books in the library.
+    . OPTIONAL: Should be able to search Languages with search bar
 
 
 # Template 2
 
-These main features have  been currently implemented.
-Try to Replicate them along with their funcaionalities:
-Features:
-    []: # * There are models for books, book copies, genre, language and authors.,
-    []: # * Users can view list and detail information for books 
-    []: # * Admin users can create and manage models.
-    []: # * Librarians can view reserved books
-    []: # * From the admin page, users can see a list of all users and edit them.
-    []: # * Can delete Update , modify authors and Books
+    These main features have  been currently implemented.
+    Try to Replicate them along with their functionailities:
+    Features:
+
+    []: There are models for books, book copies, genre, language and authors 
+    []: Users can view list and detail information for books 
+    []: Admin users can create and manage models
+
+
+# Template 3
+
+    []: Complete frontend and backend involved 
+    []: From the admin page, users can see a list of all users and Can delete Update , modify author and Books
+
+
 
 # MAKE SURE YOU HAVE DJANGO INSTALLED
 # INSTALL DJANGO
@@ -45,7 +52,6 @@ Features:
     []: # Path: cd /project_name/app
     []: # python manage.py runserver
 
-# Template 3
 # You need to create a superuser to add the Main User to the database
 # Create a superuser
     

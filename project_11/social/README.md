@@ -18,25 +18,25 @@ Only GET METHOD TO BE IMPLEMENTED HERE
 - Hit the server http://127.0.0.1:8000/ then follow terminal
 
 # TEMPLATE 1
-Scrap data from social media accounts like 
-* Facebook (Meta)
-* Instagram 
-* Twitter
-* Linkedin
-- Any 2 or more social media accounts
+    Scrap data from social media accounts like 
+    * Facebook (Meta)
+    * Instagram 
+    * Twitter
+    * Linkedin
+    - Any 2 or more social media accounts
 
 
 
 # TEMPLATE 2 
-* We would require The user's name , (username will make each of them unique) and their profile pic 
-* their number of followers , posts 
-- RESULT > IN REST FRAMEWORK
+    * We would require The user's name , (username will make each of them unique) and their profile pic 
+    * their number of followers , posts 
+    - RESULT > IN REST FRAMEWORK
 
 
 # TEMPLATE 3
-- Here based on User input in terminal (like python manage.py runserver) - You can also see the data in the terminal
-- Make sure you use Multiple exceptions (try/catch blocks) if profile is hidden or it is not int for the public view etc...
-- Optional -> Only logged in users can see the data or Use the Get method to get the data
+    - Here based on User input in terminal (like python manage.py runserver) - You can also see the data in the terminal
+    - Make sure you use Multiple exceptions (try/catch blocks) if profile is hidden or it is not int for the public view etc...
+    - Optional -> Only logged in users can see the data or Use the Get method to get the data
 
 
 # Additional changes to be done

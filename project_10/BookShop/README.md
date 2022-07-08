@@ -2,6 +2,15 @@
 In this project,You will create a Book Shop Api with backend and front-end enviornment for your project.
 Below information is the requirements and specification for the project.
 
+# Installation 
+
+```
+    pip install -r requirements.txt
+    pip install django-cors-headers
+    pip install django-crispy-forms
+    pip install xhtml2pdf
+```
+
 # Specification
 ### Template 1 
 Project is created with Complete configuration of books with all varities in the database.
@@ -13,14 +22,7 @@ Each app is a separate project,having specifications like requirements,urls,view
 * User can Order via multiple methods 
 
 ###  Template 2
-# Installation 
 
-```
-    pip install -r requirements.txt
-    pip install django-cors-headers
-    pip install django-crispy-forms
-    pip install xhtml2pdf
-```
  <h1>Logic with front end  </h1>
 * Only after User is logged in with the account, he can see  the cart and checkout.
 * User can view his order details precisely.

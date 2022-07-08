@@ -36,14 +36,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Your django it's live now open your browser and type 127.0.0.1:8000
-Or just Ctrl + Click on the terminal where your server is running , it will  automatically connect you to the server
-
 For more information ,you can view the screenshots for better understanding.
 * Try to make the weather app UI more user friendly.
 * Can Use PostgreSQL database to store multiple cities data in a single table.
 
 
+
+- Your django it's live now open your browser and type 127.0.0.1:8000
+Or just Ctrl + Click on the terminal where your server is running , it will  automatically connect you to the server
 - For more information ,you can view the screenshots for better understanding.
 
 #### I have added the screenshots in the screenshots directory.Kindly view it for better understanding.
