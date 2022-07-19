@@ -19,6 +19,7 @@ class Post(models.Model):
     visible = models.BooleanField(default=False)
     likes = models.IntegerField(default=0)
     locked = models.BooleanField(default=False)
+
     def __str__(self):
         return self.title
     def get_absolute_url(self):
@@ -33,4 +34,4 @@ class Comment(models.Model):
     def __str__(self):
         return 'Comment from' + '|' + self.author
     class Meta:
-        ordering = ['-pk']
+        ordering = ['pk']
