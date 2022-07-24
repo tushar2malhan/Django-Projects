@@ -80,8 +80,7 @@
 `docker run --rm -it --entrypoint bash <image_name>`
 
 
-* FRONTEND/settings.py 
-- Database Configuration
+* FRONTEND/settings.py  | Database Configuration |
 ```
  DATABASES = {
     'default': {
