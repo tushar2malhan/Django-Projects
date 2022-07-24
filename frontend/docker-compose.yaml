@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres
+    restart: always
+
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  
+
+# docker compose up 
+# Q Suppose db is connected but table throwing error where it does not exist in db in django ! 
+
+
+#   Execute these commands inside the Docker WEB Container 
+# -  python manage.py migrate --run-syncdb
+# -  python manage.py makemigrations appname
+# -  python manage.py migrate --fake appname
+
+# python manage.py makemigrations && python manage.py migrate && python manage.py runserver
+
+# if issue still persists, try recreate the DATABASE;
+
+

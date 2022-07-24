@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Update {% endblock %}
+
+{% block content %}
+  <h3 style="color:brown;text-align: center;"> Update your Articles </h3>
+
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{form}}
+    
+    <span>
+      <br><br>
+      <input type="submit" value="Update">
+    </span>
+  </form>
+{% endblock %}
