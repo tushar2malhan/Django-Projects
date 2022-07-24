@@ -12,39 +12,38 @@
 
 # Template 1
 # SETUP 
-* Dockerfile            ->    Instructions layed out
-* docker-compose.yaml   ->    For PostgreSQL service compatible with our Dockerfile
+    * Dockerfile            ->    Instructions layed out
+    * docker-compose.yaml   ->    For PostgreSQL service compatible with our Dockerfile
 
 
 # Template 2
-# A COMPLETE App WITH DJANGO FRAMEWORK
-. Able to show all the Tasks 
-. Displaying the Updated Tasks  with striked out text 
-These main features have  been currently implemented.
-Try to Replicate them along with their functionalities:
-Features:
-    []:  View The tasks
-    []:  Add the Tasks
-    []:  Submit results and view the Results pages
-    []:  Modify Tasks
-    []:  Order by the tasks which are not requrired by User
-    []:  Do the Redunancy  
+* A COMPLETE App WITH DJANGO FRAMEWORK
+    * Able to show all the Tasks 
+    * Displaying the Updated Tasks  with striked out text 
+    * These main features have  been currently implemented
+    Try to Replicate them along with their functionalities:
+    Features:
+        []:  View The tasks
+        []:  Add the Tasks
+        []:  Submit results and view the Results pages
+        []:  Modify Tasks
+        []:  Order by the tasks which are not requrired by User
+        []:  Do the Redunancy  
 
 
 
-# Template 3
-- You need to create a superuser to add the Main User to the database
-- Create a superuser
+* Template 3
+- You need to create a superuser to add the Main User to the database | Create a superuser
     
-    []:  python manage.py createsuperuser
-    []:  http://127.0.0.1:8000/admin - Sign in with the username and password you created
-    []:  Click on login to check the Models and User created.
-    []:  Click on the User and check the User created.
+    * []:  python manage.py createsuperuser
+    * []:  http://127.0.0.1:8000/admin - Sign in with the username and password you created
+    * []:  Click on login to check the Models and User created.
+    * []:  Click on the User and check the User created.
 
 # MAKE SURE YOU HAVE DJANGO AND DOCKER INSTALLED
-- If on Windows, Make sure your docker desktop is running.
-- If on Mac, Make sure you have docker-machine installed.
-- If on Linux, Make sure you have docker-compose installed.
+ * If on Windows, Make sure your docker desktop is running.
+ * If on Mac, Make sure you have docker-machine installed.
+ * If on Linux, Make sure you have docker-compose installed.
 
 
 # INSTRUCTIONS 
@@ -57,7 +56,7 @@ Features:
     []:  Ctrl + C                            ->   stop and exit from containers
     []:  docker-compose down                 ->   Remove the containers
     []:  docker-compose rm -f                ->   Remove the containers
-    []:  Remove everything from scratch       ->  docker system prune -a -f && docker system df && docker builder prune -f
+    []:  Remove everything from scratch      ->  docker system prune -a -f && docker system df && docker builder prune -f
 ```
 
 *  Create and start the Container 
