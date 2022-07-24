@@ -23,12 +23,13 @@
     * These main features have  been currently implemented
     Try to Replicate them along with their functionalities:
     Features:
-        []:  View The tasks
-        []:  Add the Tasks
-        []:  Submit results and view the Results pages
-        []:  Modify Tasks
-        []:  Order by the tasks which are not requrired by User
-        []:  Do the Redunancy  
+    </br>
+       * []:  View The tasks
+       * []:  Add the Tasks
+       * []:  Submit results and view the Results pages
+       * []:  Modify Tasks
+       * []:  Order by the tasks which are not requrired by User
+       * []:  Do the Redunancy  
 
 
 
