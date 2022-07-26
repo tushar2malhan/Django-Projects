@@ -2,6 +2,7 @@
 # Imported almost everything , create your view accordingly , if anything missed kindly add it manually
 
 import json
+from re import template
 from unicodedata import category
 from django.shortcuts import render, redirect
 from django.http import HttpResponse , JsonResponse
@@ -15,12 +16,12 @@ from rest_framework. parsers import JSONParser
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token             # just like User table we import the Token table 
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListCreateAPIView
 from .forms import UserRegisterForm, UserUpdateForm, TaskForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Articles
-import random
+from app.operations import less_recommended_articles
 
 
 @api_view(['POST'])                         # login portal 
@@ -67,7 +68,6 @@ def registerView(request):
     return render(request, 'register.html', {'form': form})
 
 
-@login_required
 def profile(request):
     form = UserUpdateForm(instance=request.user)
     username = request.user.username
@@ -82,36 +82,14 @@ def profile(request):
     return render(request, 'profile.html',
     {'form': form, 'username': username, 'email': email  }) 
 
-not_required = []
-@login_required
 def posts(request,pk=None):
     form = TaskForm()
     print('pk is ',pk)
-    all_articles = Articles.objects.all()
-    if pk:
-        get_category = Articles.objects.get(id=pk).category
-        articles_not_required = Articles.objects.filter(category=get_category)
-        for article in articles_not_required:
-            not_required.append(article.id)
-
-        articles_required = Articles.objects.exclude(id__in=not_required)
-
-        # print(' Articles ids not required are ',not_required)
-        # order by ids which are not required at the end of the list > [i.id for i in articles_required] + not_required
-       
-        all_articles = Articles.objects.filter\
-        (id__in = [i.id for i in articles_required] \
-        + random.sample(not_required, 1) ).order_by('-id')
-
-
-        messages.success(request, f'We have Got your response, \
-            we will do the redundancy\
-            for these articles ')
+    all_articles = less_recommended_articles(request,pk,messages) if pk else Articles.objects.all()
     paginator = Paginator(all_articles, 5)   # limit the data by 5 per page
     page_number = request.GET.get('page')   # get the page number from the url
     page_obj = paginator.get_page(page_number)
     total_pages = paginator.num_pages
-    # import pdb; pdb.set_trace()
     if request.method == "POST":
         form = TaskForm(request.POST or None)
         if form.is_valid():

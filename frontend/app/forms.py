@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import  Textarea
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -39,7 +40,20 @@ class TaskForm(forms.ModelForm):
 
     class Meta:
         model = Articles
-        fields = '__all__'
+        fields = ('title','created_at', 'updated_at', 
+        'abstract', 'affiliations', 'authors', 
+        'body', 'journal', 'keywords', 'url',
+        'category')
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Mention Your greetings'}),
+            'title': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'created_at': forms.SelectDateWidget(attrs={'type': 'date'}),
+            'updated_at':  forms.SelectDateWidget(attrs={'type': 'date'}),
+            'abstract': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'affiliations': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'authors': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'body': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'journal': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'keywords': Textarea(attrs={'cols': 10, 'rows': 2}),
+            'url': Textarea(attrs={'cols': 10, 'rows': 2}),
+
         }
