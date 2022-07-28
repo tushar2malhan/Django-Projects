@@ -27,7 +27,9 @@ class Articles(models.Model):
     journal = models.TextField(default='Journal')
     keywords = models.CharField(db_index=True, max_length=255,default='Keywords')
     url = models.CharField(max_length=255, default='url')
+    
     category = models.CharField(max_length=255, choices=CATEGORY_CHOICES, default='General')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
 
 
 

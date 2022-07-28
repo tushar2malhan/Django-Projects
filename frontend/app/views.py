@@ -1,15 +1,14 @@
-# from .models import Texts 
+
 # Imported almost everything , create your view accordingly , if anything missed kindly add it manually
 
 import json
-from re import template
-from unicodedata import category
 from django.shortcuts import render, redirect
 from django.http import HttpResponse , JsonResponse
-from django.views.generic import ListView
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User          # get all the users  in ur account 
+from django.views.generic import View
 from django.core.paginator import Paginator
+from django.views.generic import ListView
 from rest_framework.decorators import api_view , permission_classes
 from rest_framework.response import Response
 from rest_framework. parsers import JSONParser
@@ -21,7 +20,7 @@ from .forms import UserRegisterForm, UserUpdateForm, TaskForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Articles
-from app.operations import less_recommended_articles
+from .operations import less_recommended_articles
 
 
 @api_view(['POST'])                         # login portal 
