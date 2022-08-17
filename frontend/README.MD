@@ -57,7 +57,7 @@
     []:  Ctrl + C                            ->   stop and exit from containers
     []:  docker-compose down                 ->   Remove the containers
     []:  docker-compose rm -f                ->   Remove the containers
-    []:  Remove everything from scratch      ->  docker system prune -a -f && docker system df && docker builder prune -f
+    []:  Remove everything from scratch      ->   docker system prune -a -f && docker system df && docker builder prune -f && docker volume prune -f
 ```
 
 *  Create and start the Container 
