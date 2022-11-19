@@ -1,0 +1,61 @@
+version: '3.9'
+
+services:
+  
+  db:
+    image: postgres:13.2
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres
+    restart: always
+
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      # without nginx server -> run on port 8000 
+      # - "8000:8000"    # because we dont need to load balance here
+
+      # With nginx server -> we are running ngninx server to scale this django site 
+      # we we expose only the (web) container port so that both instances can be accessed
+      # as a load balancer of 2 sites for single application
+      # as both containers are running on same port 8000 localhost
+      # we can use command to run with nginx 
+      #    docker compose up -d --build --scale web=2  
+      - '8000'
+    depends_on:
+      - db
+  
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"     
+    # volumes:
+    #   - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro    # MAP local nginx file with nginx container file
+    depends_on:
+      - web
+  
+
+# docker compose up 
+# Q Suppose db is connected but table throwing error 
+# where it does not exist in db in django ! 
+
+
+#   Execute these commands inside the Docker db Container 
+# -  python manage.py migrate --run-syncdb
+# -  python manage.py makemigrations appname
+# -  python manage.py migrate --fake appname
+
+# python manage.py makemigrations && python manage.py migrate && python manage.py runserver
+
+# if issue still persists, try recreate the DATABASE;
+
+
