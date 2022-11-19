@@ -220,8 +220,6 @@ http{
 - Our application will Now be accessible on port 80 of the host machine via Nginx Load Balancer
 * Open `http://localhost/` to see the main site.
 
-*check the Container ID and Homepage
-
 * Look at the Screenshot to![django_](https://user-images.githubusercontent.com/66706496/202846286-64d34ad1-8111-4ccd-b9bf-c992e46969e1.png)
 
 
